@@ -1,0 +1,17 @@
+# Core
+numpy==1.24.3
+opencv-python-headless==4.8.1.78
+
+# Deep learning
+torch==2.0.1
+torchvision==0.15.2
+
+# Audit stack of the audited work
+mmcv==2.0.1
+mmengine==0.8.3
+mmpretrain==1.0.0
+# mmsegmentation: install the fork that accompanies the audited work, e.g.
+#   git clone <audited-repo>/mmsegmentation && pip install -e mmsegmentation
+
+# Utilities
+matplotlib==3.7.2

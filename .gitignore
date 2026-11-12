@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data and checkpoints
+data/
+*.pth
+*.npz
+*.npy
+runs/
+work_dir/
+
+# Generated configs
+configs/generated/
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
