@@ -5,8 +5,15 @@ __pycache__/
 .venv/
 venv/
 
-# Data and checkpoints
-data/
+# Dataset (downloaded separately; see data/README.md)
+data/images/
+data/masks/
+data/*.zip
+train_images/
+train_masks/
+test_images/
+
+# Checkpoints and run directories
 *.pth
 *.npz
 *.npy
