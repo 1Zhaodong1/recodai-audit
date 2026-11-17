@@ -1,0 +1,146 @@
+{
+ "checked": 223,
+ "findings": [
+  {
+   "config": "sam_b.py",
+   "line": 63,
+   "type": "DiceLoss",
+   "keys": [
+    "use_sigmoid",
+    "loss_weight"
+   ],
+   "source": "author",
+   "extra": [
+    "use_sigmoid"
+   ],
+   "kind": "silently_ignored",
+   "loss_file": "dice_loss.py",
+   "has_kwargs": true
+  },
+  {
+   "config": "sam_b.py",
+   "line": 90,
+   "type": "DiceLoss",
+   "keys": [
+    "use_sigmoid",
+    "loss_weight"
+   ],
+   "source": "author",
+   "extra": [
+    "use_sigmoid"
+   ],
+   "kind": "silently_ignored",
+   "loss_file": "dice_loss.py",
+   "has_kwargs": true
+  },
+  {
+   "config": "segformer_mit-b0.py",
+   "line": 42,
+   "type": "DiceLoss",
+   "keys": [
+    "use_sigmoid",
+    "loss_weight"
+   ],
+   "source": "author",
+   "extra": [
+    "use_sigmoid"
+   ],
+   "kind": "silently_ignored",
+   "loss_file": "dice_loss.py",
+   "has_kwargs": true
+  },
+  {
+   "config": "segformer_mit-b5.py",
+   "line": 42,
+   "type": "DiceLoss",
+   "keys": [
+    "use_sigmoid",
+    "loss_weight"
+   ],
+   "source": "author",
+   "extra": [
+    "use_sigmoid"
+   ],
+   "kind": "silently_ignored",
+   "loss_file": "dice_loss.py",
+   "has_kwargs": true
+  }
+ ],
+ "classes": {
+  "Accuracy": {
+   "params": [
+    "ignore_index",
+    "thresh",
+    "topk"
+   ],
+   "kwargs": false
+  },
+  "CrossEntropyLoss": {
+   "params": [
+    "avg_non_ignore",
+    "class_weight",
+    "loss_name",
+    "loss_weight",
+    "reduction",
+    "use_mask",
+    "use_sigmoid"
+   ],
+   "kwargs": false
+  },
+  "BinaryClsLoss": {
+   "params": [
+    "loss_name",
+    "loss_weight"
+   ],
+   "kwargs": false
+  },
+  "DiceLoss": {
+   "params": [
+    "class_weight",
+    "exponent",
+    "ignore_index",
+    "loss_name",
+    "loss_weight",
+    "reduction",
+    "smooth"
+   ],
+   "kwargs": true
+  },
+  "FocalLoss": {
+   "params": [
+    "alpha",
+    "class_weight",
+    "gamma",
+    "loss_name",
+    "loss_weight",
+    "reduction",
+    "use_sigmoid"
+   ],
+   "kwargs": false
+  },
+  "LovaszLoss": {
+   "params": [
+    "class_weight",
+    "classes",
+    "loss_name",
+    "loss_type",
+    "loss_weight",
+    "per_image",
+    "reduction"
+   ],
+   "kwargs": false
+  },
+  "TverskyLoss": {
+   "params": [
+    "alpha",
+    "beta",
+    "class_weight",
+    "ignore_index",
+    "loss_name",
+    "loss_weight",
+    "smooth"
+   ],
+   "kwargs": false
+  }
+ }
+}
