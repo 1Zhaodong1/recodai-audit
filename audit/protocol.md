@@ -47,7 +47,19 @@ The audited pipeline composes a synthetic copy-paste pair and overwrites the
 ground-truth mask; the branch that would have used the real mask was commented
 out. The check is a logging assertion on the mask identity per iteration.
 
-## Step 4 — submission-path verification
+## Step 4 — controlled reproduction
+
+Re-train the reproduced pipeline in a factorial design over the two independent
+defects (Dice term active/inactive, real masks off/on), five seeds per cell,
+with everything else fixed. Report main effects and the interaction; do not
+compare absolute scores across different splits
+
+```bash
+python configs/make_configs.py --base <AUDITED_REPO>/configs/mix.py --out configs/generated
+python audit/eval_full.py --root <DATA_ROOT> --configs configs/generated --work-dir runs/
+```
+
+## Step 5 — submission-path verification
 
 Start from the inference entry point of the released submission (notebook or
 script) and follow the call chain. For each stage described in the paper, record
@@ -59,18 +71,6 @@ grep -rniE "pair|contrast|cosine" <submission-notebook-or-script>
 
 A description stage with no corresponding call is a documentation defect
 (Defect 3).
-
-## Step 5 — controlled reproduction
-
-Re-train the reproduced pipeline in a factorial design over the two independent
-defects (Dice term active/inactive, real masks off/on), three seeds per cell,
-with everything else fixed. Report main effects and the interaction; do not
-compare absolute scores across different splits
-
-```bash
-python configs/make_configs.py --base <AUDITED_REPO>/configs/mix.py --out configs/generated
-python audit/eval_full.py --root <DATA_ROOT> --configs configs/generated --work-dir runs/
-```
 
 ## What the protocol cannot establish
 

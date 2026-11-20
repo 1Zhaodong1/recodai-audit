@@ -1,6 +1,6 @@
 # Ablation configurations
 
-`make_configs.py` derives the twelve runs of the factorial design from the single
+`make_configs.py` derives the twenty runs of the factorial design from the single
 training configuration released with the audited work. Only the following
 entries differ between runs; everything else is inherited from the base file.
 

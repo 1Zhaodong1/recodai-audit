@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Derive the twelve factorial-ablation configurations from a base config.
+"""Derive the twenty factorial-ablation configurations from a base config.
 
 The audited repository ships one training config for the mixed setting. The
 factorial design varies exactly two keys:
@@ -9,7 +9,7 @@ factorial design varies exactly two keys:
     real-mask mix  : p_real=0.0   (synthetic supervision only)
                      p_real=0.5   (mixed supervision)
 
-plus three seeds. Everything else is inherited.
+plus five seeds. Everything else is inherited.
 
 Usage:
     python configs/make_configs.py --base <AUDITED_REPO>/configs/mix.py \
@@ -33,7 +33,7 @@ CELLS = {
     "E3": (BROKEN, "p_real=0.5"),
     "E4": (FIXED, "p_real=0.5"),
 }
-SEEDS = (42, 2024, 7)
+SEEDS = (42, 2024, 7, 1, 2)
 
 
 def main():
