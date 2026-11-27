@@ -1,0 +1,25 @@
+{
+ "main_5seed.json": "per-image predictions, main five-seed design",
+ "deleak_5seed.json": "per-image predictions, de-overlapped design",
+ "budget_5seed.json": "training-budget runs (1k/2k/3k)",
+ "sweep_5seed.json": "threshold sweep of the 1k checkpoints",
+ "strata.json": "per-image F1 and stratum of the replication",
+ "tables": {
+  "Table 1": "audit/unit_test.py",
+  "Table 2": "audit/scan_configs.py",
+  "Table 3": "main_5seed.json + configs/make_configs.py",
+  "Table 4": "strata.json + analysis/stratified.py",
+  "Table 5": "main_5seed.json",
+  "Table 6": "sweep_5seed.json",
+  "Table 7": "budget_5seed.json",
+  "S7": "strata.json",
+  "S9": "budget_5seed.json",
+  "S11": "deleak_5seed.json",
+  "S13": "audit/probe_loss_channels.py"
+ },
+ "figures": {
+  "Fig. 1": "main_5seed.json + strata.json",
+  "Fig. 2": "audit/eval_full.py (samples)",
+  "Fig. 3": "sweep_5seed.json"
+ }
+}
